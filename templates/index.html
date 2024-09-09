@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- Other head elements -->
+    <title>原神账号管理</title>
+    <link rel="icon" href="static/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="static/css/top-nav.css">
+    <link rel="stylesheet" href="static/css/dropdown.css">
+    <link rel="stylesheet" href="static/css/buttons.css">
+    <link rel="stylesheet" href="static/css/input-box.css">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-screen-webfont/1.7.0/style.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.13.1/dist/sweetalert2.min.css" >
+    <script src="static/js/input.js" defer></script>
+    <script src="static/js/server_status.js" defer></script>
+    <script src="static/js/account_create.js" defer></script>
+    <script src="static/js/account_delete.js" defer></script>
+    <script src="static/js/account_ban.js" defer></script>
+    <script src="static/js/account_permissions.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.13.1/dist/sweetalert2.all.min.js"></script>
+</head>
+<body>
+    <div>
+        <div class="top_nav">
+            <div class="top_nav_content">
+                <p class="nav-title" id="player_count">在线玩家数: Loading...</p>
+                <p class="nav-title" id="server_version">服务端版本: Loading...</p>
+                <p id="error_banner" class="error-banner" style="display: none;"></p>
+            </div>
+        </div>
+
+        <div class="content">
+            <h1>原神账号管理</h1>
+
+            <h2>生成账号</h2>
+            <div class="container">
+            <input id="create_count" type="number" oninput="validateInput(this)" placeholder="请输入账号数量">
+            <button onclick="createAccounts()">提交</button>
+            </div>
+
+            <h2>删除账号</h2>
+            <div class="container">
+            <input id="delete_username" type="text"  placeholder="请输入用户名">
+            <button onclick="deleteAccount()">提交</button>
+            </div>
+
+            <h2>封禁账号</h2>
+            <div class="container">
+            <input type="text" id="ban_username" placeholder="请输入用户名">
+            <button onclick="banAccount()">提交</button>
+            </div>
+            <div>
+                <label>
+                    <input type="radio" name="ban_status" value="true" checked> 封禁
+                </label>
+                <label>
+                    <input type="radio" name="ban_status" value="false"> 解封
+                </label>
+            </div>
+            
+
+        <h2>权限管理</h2>
+        <div class="container">
+            <input type="text" id="update_username" placeholder="请输入用户名">
+            <button onclick="updatePermissions('add')">添加</button>
+        </div>
+        <div id="permissions_wrapper" class="container">
+            <div id="permissions_button" onclick="toggleDropdown()">player.*</div>
+            <select id="permissions_select"  size="10" multiple></select>
+            <button onclick="updatePermissions('remove')">移除</button>
+        </div>
+    </div>
+</body>
+
+</html>

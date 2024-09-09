@@ -1,0 +1,120 @@
+/* General body styles */
+* {
+    box-sizing: border-box;
+    font-family: "LXGW WenKai Screen", sans-serif;
+}
+
+/* Global scrollbar style */
+
+html,
+body {
+    height: 100%;
+    overflow: auto;
+}
+
+body {
+    font-family: "LXGW WenKai Screen", sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    background-image: url('https://www.loliapi.com/acg/');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.nav-title {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 2rem;
+}
+.content {
+    align-items: center;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    background-color: rgba(255,255,255,.5) !important;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: left;
+
+}
+
+h1 {
+    font-size: 32px;
+    margin-top: 0px;
+    text-align: center;
+    color: #0D697C;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 20px;
+    color: #333;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+iframe {
+    background: white;
+}
+
+
+.center-title {
+    color: #494949;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 10px;
+    background: rgba(246, 246, 246, 0.29);
+    box-shadow: 0px 10px 20px rgba(203, 203, 203, 0.27);
+    backdrop-filter: blur(10px);
+    padding: 5px 0;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .top_nav_content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .top_back {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .content {
+        padding: 10px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    input[type="text"], input[type="number"], select {
+        font-size: 14px;
+    }
+}
+

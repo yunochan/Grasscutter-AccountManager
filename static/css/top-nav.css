@@ -1,0 +1,34 @@
+/* Top navigation styles */
+.top_nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; 
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.top_nav_content {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+}
+
+.nav-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    margin-right: 20px;
+}
+
+.error-banner {
+    color: red;
+    font-weight: bold;
+}

@@ -1,0 +1,32 @@
+Grasscutter-AccountManager
+L routes
+  L accounts.py
+  L permission.py
+  L status.py
+L static
+  L css
+    L buttons.css
+	L dropdown.css
+	L input-box.css
+	L top-nav.css
+	L styles.css
+  L js
+    L account_ban.js
+	L account_create.js
+	L account_delete.js
+	L account_permissions.js
+	L input.js
+	L server_status.js
+  L images
+    Lfavicon.ico
+L log
+L templates
+  L index.html
+L utils
+  L logger.py
+  L tool.py
+L config.py
+L main.py
+L models.py
+L permissions.json
+L requirements.txt
